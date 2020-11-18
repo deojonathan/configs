@@ -40,6 +40,3 @@ set undofile
 syntax on
 colorscheme elflord
 
-
-call plug#begin('~/.vim/plugged')
-call plug#end()
