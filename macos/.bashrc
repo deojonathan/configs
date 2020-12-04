@@ -63,14 +63,19 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-export GOROOT=$HOME/go
-export GOPATH=$HOME/go-ws
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$(go env GOPATH)/bin
-
 # Some terminal launch configurations for aesthetics
 PROMPT_COMMAND=echo
 PS1="\u@ \W$ "
 neofetch; echo; motivate; echo;
 # cowsay -f tux -pn -W 50
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/serverless.bash ] && . /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/sls.bash ] && . /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/slss.bash ] && . /Users/dguillermo/viyahe/lambda-functions/node_modules/tabtab/.completions/slss.bash
